@@ -1,0 +1,27 @@
+.navbar {
+    background: rgb(128, 128, 128);
+    padding: 1rem;
+    
+    
+  }
+  
+  .nav-menu {
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-right: 1rem;
+  }
+  
+  .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  

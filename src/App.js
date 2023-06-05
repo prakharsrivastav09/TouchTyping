@@ -1,7 +1,12 @@
 import {useState, useEffect, useRef} from 'react'
+// import "./input.css";
+import "./Deskstop1.css"
+import Navbar from './Navbar'
 import randomWords from 'random-words'
-const NUMB_OF_WORDS = 200
-const SECONDS = 60
+const NUMB_OF_WORDS = 50
+const SECONDS = 10
+
+
 
 function App() {
   const [words, setWords] = useState([])
@@ -99,29 +104,31 @@ function App() {
     }
   }
 
+  
+  
 
   
 
-
   return (
+    <>
+
+    <Navbar/>
+    
 
     
-    <div className="App">
+    <div className="App has-text-centered">
+      <h1 className="tot">Typing Skill Test </h1>
+     
+      <h1 className="title">Test Your Typing Skills in a Minute </h1>
       
-      <div className="section">
-        <div className="is-size-1 has-text-centered has-text-primary">
+      <div className=" section ctn">
+        <div className="is-size-1 has-text-centered startcard">
+        <p className="is-size-5">Timer</p>
           <h2>{countDown}</h2>
+          
         </div>
       </div>
       
-      <div className="control is-expanded section">
-        <input ref={textInput} disabled={status !== "started"} type="text" className="input" onKeyDown={handleKeyDown} value={currInput} onChange={(e) => setCurrInput(e.target.value)}  />
-      </div>
-      <div className="section">
-        <button className="button is-info is-fullwidth" onClick={start}>
-          Start
-        </button>
-      </div>
       {status === 'started' && (
         <div className="section" >
           <div className="card">
@@ -142,16 +149,24 @@ function App() {
           </div>
         </div>
       )}
+      <div className="control is-expanded section ">
+        <input className = "ghl input" rows = "5" ref={textInput} disabled={status !== "started"} type="text"  onKeyDown={handleKeyDown} value={currInput} onChange={(e) => setCurrInput(e.target.value)}  />
+      </div>
+      <div className="section ">
+        <button className="button  Startbutton" onClick={start}>
+          Take Test
+        </button>
+      </div>
       {status === 'finished' && (
         <div className="section">
           <div className="columns">
-            <div className="column has-text-centered">
+            <div className="column has-text-centered startcard">
               <p className="is-size-5">Words per minute:</p>
               <p className="has-text-primary is-size-1">
                 {correct}
               </p>
             </div>
-            <div className="column has-text-centered">
+            <div className="column has-text-centered startcard">
               <p className="is-size-5">Accuracy:</p>
               {correct !== 0 ? (
                 <p className="has-text-info is-size-1">
@@ -160,13 +175,20 @@ function App() {
               ) : (
                 <p className="has-text-info is-size-1">0%</p>
               )}
+              
             </div>
           </div>
         </div>
       )}
 
     </div>
+    
+    </>
+
   );
+
 }
+
+
 
 export default App;
