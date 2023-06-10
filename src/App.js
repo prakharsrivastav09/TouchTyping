@@ -161,10 +161,6 @@ function App() {
             <div className="control is-expanded section">
               <div className="section take-test-container">
 
-                <div className="imageccc">
-              <div className="image"><img src={Type } /></div>
-              </div>
-
                 <button className="button Startbutton has-text-centered" onClick={start}>
                   Take Test
                 </button>
