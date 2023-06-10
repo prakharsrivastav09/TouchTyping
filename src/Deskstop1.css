@@ -22,6 +22,10 @@
     height: 43px;
     width: 220px;
     border-radius: 20px;
+    margin-top: 30%;
+    
+    
+    
   }
   
   .ctn {
@@ -136,5 +140,16 @@
   justify-content: center;
   align-items: center;
 }
+.image{
+  align-items: center;
+  margin-left: 30%;
+  margin-top: -40%;
+  
+}
+.imageccc{
+  justify-content: center;
+  
 
+  
+}
   

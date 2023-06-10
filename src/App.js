@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import "./Deskstop1.css";
 import Navbar from "./Navbar";
 import randomWords from "random-words";
+import Type from "./Type.jpg";
 
 const NUMB_OF_WORDS = 50;
 const SECONDS = 10;
@@ -159,7 +160,12 @@ function App() {
           <div className="section">
             <div className="control is-expanded section">
               <div className="section take-test-container">
-                <button className="button Startbutton" onClick={start}>
+
+                <div className="imageccc">
+              <div className="image"><img src={Type } /></div>
+              </div>
+
+                <button className="button Startbutton has-text-centered" onClick={start}>
                   Take Test
                 </button>
               </div>
